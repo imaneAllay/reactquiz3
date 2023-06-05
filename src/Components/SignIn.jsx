@@ -6,11 +6,14 @@ export const SignIn = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-
+  const TOKEN = 'token'
   const handleLogin = async () => {
+  
     // Store token in localStorage
-    
+    localStorage.setItem(TOKEN,JSON.stringify({username}));
+    localStorage.setItem(TOKEN,JSON.stringify({password}));
     // Navigate user to home page
+    navigate("/");
   };
 
   return (
